@@ -110,7 +110,7 @@ public class Student {
         }
     }
     public static String[] getStudentInfo(String id) throws Exception {
-        Scanner scan = new Scanner(new File("src/Model/students.csv"));
+        Scanner scan = new Scanner(new File("./Entrega-3/src/Model/students.csv"));
         String[] info;
         ArrayList<String> students = new ArrayList<String>();
         while (scan.hasNextLine()) {
@@ -127,7 +127,7 @@ public class Student {
 
     }
     public static void setStudentInfo(String name, String id, String email, AvaliableCourses course) throws IOException{
-        FileWriter writer = new FileWriter(new File("./src/Model/students.csv"), true);
+        FileWriter writer = new FileWriter(new File("./Entrega-3/src/Model/students.csv"), true);
         writer.write(name + ", " + id + ", " + email + ", " + course.toString() + "\n");
         writer.flush();
         writer.close();
